@@ -1,0 +1,174 @@
+import java.util.Scanner;
+class Student
+{
+	//public:
+		String name;
+		int roll;
+		String stream;
+		int year;
+		int age;
+		String gender;
+		String state;
+	
+	Student()
+	{
+		name="";
+		roll=0;
+		stream="";
+		year=0;
+		age=0;
+		gender="";
+		state="";
+	}
+	Student(String n1,int r1, String s1,int y1,int a1,String g1,String s2 )
+	{
+		name=n1;
+		roll=r1;
+		stream=s1;
+		year=y1;
+		age=a1;
+		gender=g1;
+		state=s2;
+	}
+	void input(Scanner sc)
+	{
+		System.out.println("Enter name of student: ");
+		String name=sc.next();
+		System.out.println("Enter roll of student: ");
+		int roll=sc.nextInt();
+		System.out.println("Enter stream of student: ");
+		String stream=sc.next();
+		System.out.println("Enter year of student: ");
+		int year=sc.nextInt();
+		System.out.println("Enter age of student: ");
+		int age=sc.nextInt();
+		System.out.println("Enter gender of student: ");
+		String gender=sc.next();
+		System.out.println("Enter state of student: ");
+		String state=sc.next();
+
+	}
+	void display()
+	{
+		System.out.println("Details of the student are as follow: ");
+		System.out.println("Name: "+name);
+		System.out.println("Roll No: "+roll);
+		System.out.println("Stream: "+stream);
+		System.out.println("Age: "+age);
+		System.out.println("Year: "+year);
+		System.out.println("Gender: "+gender);
+		System.out.println("State: "+state);
+
+	}
+	void update(Scanner sc)
+	{
+		int option;
+		System.out.println("1. What do you want update, choose an option");
+		System.out.println("2. Roll No. of Student: ");
+		System.out.println("3. Stream of Student: ");
+		System.out.println("4. Age of Student: ");
+		System.out.println("5. Year of Student: ");
+		System.out.println("6. Gender of Student: ");
+		System.out.println("7. State of Student: ");
+		System.out.println("8. Exit ");
+		System.out.println("Please enter your option: ");
+		int option=sc.nextInt();
+
+		switch(option)
+		{
+			case 1:
+			{
+				System.out.println("Enter new name of student: ");
+				String name=sc.next();
+				break;
+			}
+			case 2:
+			{
+				System.out.println("Enter new roll no. of student: ");
+				int roll=sc.nextInt();
+				break;
+			}
+			case 3:
+			{
+				System.out.println("Enter new stream of student: ");
+				String stream=sc.next();
+				break;
+			}
+			case 4:
+			{
+				System.out.println("Enter new age of student: ");
+				int age=sc.nextInt();
+				break;
+			}
+			case 5:
+			{
+				System.out.println("Enter new year of student: ");
+				int year=sc.nextInt();
+				break;
+			}
+			case 6:
+			{
+				System.out.println("Enter new gender of student: ");
+				String gender=sc.next();
+				break;
+			}
+			case 7:
+			{
+				System.out.println("Enter new state of student: ");
+				String state=sc.next();
+				break;
+			}
+			case 8:
+			{
+				System.out.println("Successfully Exited ");
+				break;
+			}
+			default:
+			{
+				System.out.println("Wrong input, Please choose correct option ");
+			}
+		}
+	}
+	void menu()
+	{
+		System.out.println("Choose an option:");
+		System.out.println("1. Input new student detail:");
+		System.out.println("2. Delete any old student detail:");
+		System.out.println("3. Display any student detail:");
+		System.out.println("4. Update any student detail:");
+		System.out.println("5. Exit");
+
+	}
+}
+class Database
+{
+	public static void main(String[] args) 
+	{
+		int arr[][]={{"Atif",1,"IT",20,2,"Male","Bihar"},{"Ram",2,"CS",21,3,"Male","UP"},{"Golu",3,"EIE",18,1,"Male","West Bengal"},{"Sonu",4,"CE",22,4,"Male","Delhi"},{"Munni",5,"ME",19,2,"Female","Bihar"}};
+		int i=0,choice;
+		Scanner in=new Scanner(System.in);
+
+		do
+		{
+			menu();
+			System.out.println("What do you want, please enter: ");
+			int choice=in.nextInt();
+			Student s=new Student();
+			switch(choice)
+			{
+				case 1:
+				{
+					s.input();
+					System.out.println("Student Details Inputed Successfully");
+					break;
+				}
+				case 2:
+				{
+					System.out.println("Enter rool no of student for deletion: ");
+					int r=in.nextInt();
+					boolean flag1=false;
+				}
+			}
+		}while (choice!=5);
+	}
+}

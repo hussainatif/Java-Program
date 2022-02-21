@@ -1,0 +1,22 @@
+class cellPhone 
+{
+	public static void main(String[] args) 
+	{
+		void Ring()
+		{
+			System.out.println("Ringing");
+		}
+		void Vibrate()
+		{
+			System.out.println("Vibrating");
+		}
+		void send()
+		{
+			System.out.println("Sending Message");
+		}
+		cellPhone obj=new cellPhone();
+		obj.Ring();
+		obj.Vibrate();
+		obj.send();
+	}
+}
